@@ -1,11 +1,15 @@
 import React from 'react';
-import CSSModules from 'react-css-modules';
-import styles from './styles.scss';
 
-const Button = ({ children }) => (
-  <button styleName='Button'>
+export default const Button = () => (
+  <button style={styles.homeButton}>
     {children}
   </button>
 );
 
-export default CSSModules(Button, styles);
+const styles = StyleSheet.create({
+  homeButton: {
+    width: '100%',
+    backgroundColor: '#aaa',
+    color: '#000000'
+  },
+});
