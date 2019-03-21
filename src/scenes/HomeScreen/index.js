@@ -7,7 +7,7 @@ export default class HomeScreen extends React.Component {
       <View>
         <ListItem
           key={0}
-          title='Remove Expense'
+          title='Remove Expehkjhknse'
           leftIcon={{name: 'flight-takeoff'}}
           topDivider={true}
           onPress={() => this.props.navigation.navigate('RemoveExpense')}
