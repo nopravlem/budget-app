@@ -2,7 +2,8 @@ import React from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import AddExpense from './src/scenes/AddExpense';
-import RemoveExpense from './src/scenes/RemoveExpense';
+import Progress from './src/scenes/Progress';
+import CreateGoals from './src/scenes/CreateGoals';
 
 import { View, Text, StyleSheet } from 'react-native';
 import { ListItem } from 'react-native-elements';
@@ -12,19 +13,26 @@ class HomeScreen extends React.Component {
     return (
       <View>
         <ListItem
-          key={0}
-          title='Remove Expense'
-          leftIcon={{name: 'flight-takeoff'}}
-          topDivider={true}
-          onPress={() => this.props.navigation.navigate('RemoveExpense')}
-        />
-        <ListItem
           key={1}
           title='Add Expense'
           leftIcon={{name: 'ios-american-football'}}
           topDivider={true}
           bottomDivider={true}
           onPress={() => this.props.navigation.navigate('AddExpense')}
+        />
+        <ListItem
+          key={0}
+          title='See Progress'
+          leftIcon={{name: 'flight-takeoff'}}
+          topDivider={true}
+          onPress={() => this.props.navigation.navigate('Progress')}
+        />
+        <ListItem
+          key={0}
+          title='Set Goals'
+          leftIcon={{name: 'flight-takeoff'}}
+          topDivider={true}
+          onPress={() => this.props.navigation.navigate('CreateGoals')}
         />
       </View>
     );
@@ -42,7 +50,8 @@ const styles = StyleSheet.create({
 const Routes = createStackNavigator(
   {
     Home: HomeScreen,
-    RemoveExpense: RemoveExpense,
+    CreateGoals: CreateGoals,
+    Progress: Progress,
     AddExpense: AddExpense
   },
   {
