@@ -10,12 +10,13 @@ import { ListItem } from 'react-native-elements';
 
 import {SpendingChart} from './src/scenes/HomeScreen/components/SpendingChart'
 
+// TODO: move homescreen into its own component
 class HomeScreen extends React.Component {
   render() {
     return (
       <View>
         <ListItem
-          key={1}
+          key={0}
           title='Add Expense'
           leftIcon={{name: 'add'}}
           topDivider={true}
@@ -23,14 +24,14 @@ class HomeScreen extends React.Component {
           onPress={() => this.props.navigation.navigate('AddExpense')}
         />
         <ListItem
-          key={0}
+          key={1}
           title='See Progress'
           leftIcon={{name: 'assignment'}}
           topDivider={true}
           onPress={() => this.props.navigation.navigate('Progress')}
         />
         <ListItem
-          key={0}
+          key={2}
           title='Set Goals'
           leftIcon={{name: 'library-add'}}
           topDivider={true}
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
   },
 });
 
+// TODO: move routes into its own thang
 const Routes = createStackNavigator(
   {
     Home: HomeScreen,
