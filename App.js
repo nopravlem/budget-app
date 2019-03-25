@@ -8,6 +8,8 @@ import CreateGoals from './src/scenes/CreateGoals';
 import { View, Text, StyleSheet } from 'react-native';
 import { ListItem } from 'react-native-elements';
 
+import {SpendingView} from './src/scenes/HomeScreen/components/SpendingView'
+
 class HomeScreen extends React.Component {
   render() {
     return (
@@ -15,7 +17,7 @@ class HomeScreen extends React.Component {
         <ListItem
           key={1}
           title='Add Expense'
-          leftIcon={{name: 'ios-american-football'}}
+          leftIcon={{name: 'add'}}
           topDivider={true}
           bottomDivider={true}
           onPress={() => this.props.navigation.navigate('AddExpense')}
@@ -23,17 +25,19 @@ class HomeScreen extends React.Component {
         <ListItem
           key={0}
           title='See Progress'
-          leftIcon={{name: 'flight-takeoff'}}
+          leftIcon={{name: 'assignment'}}
           topDivider={true}
           onPress={() => this.props.navigation.navigate('Progress')}
         />
         <ListItem
           key={0}
           title='Set Goals'
-          leftIcon={{name: 'flight-takeoff'}}
+          leftIcon={{name: 'library-add'}}
           topDivider={true}
           onPress={() => this.props.navigation.navigate('CreateGoals')}
         />
+
+        <SpendingView />
       </View>
     );
   }

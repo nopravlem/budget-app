@@ -6,19 +6,24 @@ export default class HomeScreen extends React.Component {
     return (
       <View>
         <ListItem
-          key={0}
-          title='Remove Expehkjhknse'
-          leftIcon={{name: 'flight-takeoff'}}
-          topDivider={true}
-          onPress={() => this.props.navigation.navigate('RemoveExpense')}
-        />
-        <ListItem
           key={1}
           title='Add Expense'
-          leftIcon={{name: 'ios-american-football'}}
-          topDivider={true}
+          leftIcon={{name: 'add'}}
           bottomDivider={true}
           onPress={() => this.props.navigation.navigate('AddExpense')}
+        />
+        <ListItem
+          key={0}
+          title='See Progress'
+          leftIcon={{name: 'assignment'}}
+          bottomDivider={true}
+          onPress={() => this.props.navigation.navigate('Progress')}
+        />
+        <ListItem
+          key={0}
+          title='Set Goals'
+          leftIcon={{name: 'library-add'}}
+          onPress={() => this.props.navigation.navigate('CreateGoals')}
         />
       </View>
     );
