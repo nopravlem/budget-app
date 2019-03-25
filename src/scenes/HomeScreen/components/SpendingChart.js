@@ -10,7 +10,7 @@ const pieChartData = [
   { name: 'Moscow', population: 11920000, color: 'rgb(0, 0, 255)', legendFontColor: '#7F7F7F', legendFontSize: 15 }
 ]
 
-export class SpendingView extends React.Component {
+export class SpendingChart extends React.Component {
   render() {
     return (
         <PieChart

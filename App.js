@@ -8,7 +8,7 @@ import CreateGoals from './src/scenes/CreateGoals';
 import { View, Text, StyleSheet } from 'react-native';
 import { ListItem } from 'react-native-elements';
 
-import {SpendingView} from './src/scenes/HomeScreen/components/SpendingView'
+import {SpendingChart} from './src/scenes/HomeScreen/components/SpendingChart'
 
 class HomeScreen extends React.Component {
   render() {
@@ -37,7 +37,7 @@ class HomeScreen extends React.Component {
           onPress={() => this.props.navigation.navigate('CreateGoals')}
         />
 
-        <SpendingView />
+        <SpendingChart />
       </View>
     );
   }
