@@ -8,7 +8,9 @@ import CreateGoals from './src/scenes/CreateGoals';
 import { View, Text, StyleSheet } from 'react-native';
 import { ListItem } from 'react-native-elements';
 
+
 import {SpendingChart} from './src/scenes/HomeScreen/components/SpendingChart'
+
 
 // TODO: move homescreen into its own component
 class HomeScreen extends React.Component {
